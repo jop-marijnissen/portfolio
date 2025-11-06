@@ -32,6 +32,7 @@
 
 html {
 	scroll-behavior: smooth;
+	background: linear-gradient(200deg, var(--color-bg-primary-1), var(--color-bg-primary-2));
 }
 
 body {
