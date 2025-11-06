@@ -1,0 +1,227 @@
+<!doctype html>
+
+<html lang="nl">
+	
+<head>
+	
+	<meta charset="UTF-8">
+		
+	<title>Home · Jop Marijnissen</title>
+	<link rel="icon" type="image/x-icon" href="images/favicon.png">
+	
+	<!-- Stylesheet die alle standaard ingestelde waardes reset/naar 0 brengt voor makkelijkere aanpassingen -->
+	<link rel="stylesheet" href="styles/reset.css">
+		
+	<!-- Main stylesheet -->
+	<link rel="stylesheet" href="styles/main.css">
+
+	<!-- Lettertypes importen -->
+	<link rel="stylesheet" href="styles/general-sans.css">
+	<link rel="stylesheet" href="styles/clash-display.css">
+	<link rel="stylesheet" href="styles/zodiak.css">
+		
+	<!-- Dit geeft de browser instructies over hoe het om moet gaan met de dimensies van de browser en het schalen van content -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Dit geeft aan welke titel, beschrijving, afbeelding en url gebruikt moet worden in de link preview op bijv. social media -->
+	<meta property="og:title" content="Showcase site Jop Marijnissen">
+	<meta property="og:type" content="website">
+	<meta property="og:description" content="Hoi! Ik ben Jop Marijnissen. Een jonge, gepassioneerde product designer die door een nieuwsgierige lens naar de wereld kijkt. Ik sta voor gebruiksvriendelijke producten die nét dat stapje verder gaan en iedereens dag wat beter, makkelijker mooier maken. Neem een kijkje op mij of mijn cases!">
+	<meta property="og:url" content="https://jopmarijnissen.sajoan.com">
+	<meta property="og:image" content="images/portretfoto.jpg">
+
+</head>
+	
+<body>
+	
+	<script src="js/main.js"></script>
+
+<header>
+
+	<!-- Skip knop voor toegankelijkheid-->
+	<a href="#mainContent" id="headerSkip">Ga naar de inhoud</a>
+	
+	<!-- Wordmark links in de header-->
+	<a href="index.html" title="Ga naar de homepagina" class="headerWordmark">JM</a>
+
+		<!-- Lijst van navigatielinks -->
+		<nav class="navContent">
+			<ul>
+				<li class="current"><a href="index.html" title="Ga naar de homepagina">Home</a></li>
+				<li><a href="cv.html" title="Ga naar de pagina van mijn CV">CV</a></li>
+				<li><a href="contact.html" title="Ga naar de contactpagina">Contact</a></li>
+			</ul>
+		</nav>
+
+	<div id="spotlightSwitch">
+
+		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fffbd7" aria-hidden="true">
+			<path d="M516-82q-9 2-18 2h-18q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480v18q0 9-2 18l-78-24v-12q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93h12l24 78Zm305 22L650-231 600-80 480-480l400 120-151 50 171 171-79 79Z"/>
+		</svg>
+		
+		<label class="switch">
+			<input type="checkbox" id="spotlightToggle" title="Schakel spotlight modus in/uit" aria-label="Schakel spotlight modus in/uit">
+			<span class="slider round"></span>
+		</label>
+
+	</div>
+
+</header>
+
+<!-- Alle main content van de pagina binnen een grid -->
+<main class="gridContainer" id="mainContent">
+	
+	<!-- Section met header en intro van de pagina -->
+	<section class="pageHeader" id="headerAsideLeft">
+		<h1>Stapje <span class="noWrap">verder<span id="heroComma">,</span></span> altijd</h1>
+		<p><span class="emphasis">Hoi!</span> Ik ben Jop Marijnissen. Een jonge, gepassioneerde <span class="emphasis">product designer</span> die door een nieuwsgierige lens naar de wereld kijkt. Ik sta voor gebruiksvriendelijke producten die nét dat stapje verder gaan en iedereens dag wat beter, makkelijker <span class="ampersand">&</span> mooier maken.</p>
+		<br>
+		<a href="cv.html" class="linkButton">Check m'n CV!</a>
+	</section>
+	
+	<!-- Hero image bovenaan pagina -->
+	<div class="heroImage">
+		<img src="images/portretfoto.jpg" alt="Portretfoto van Jop Marijnissen">
+		<!-- Circular text path wrapping the hero image -->
+		<svg class="heroRing" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+			<defs>
+				<path id="heroCirclePath" d="M50,50 m-45,0 a45,45 0 1,1 90,0 a45,45 0 1,1 -90,0" />
+			</defs>
+			<g class="heroRingText">
+				<text>
+					<textPath href="#heroCirclePath" startOffset="0%">Jop Marijnissen · Jop Marijnissen · Jop Marijnissen · Jop Marijnissen · Jop Marijnissen · </textPath>
+				</text>
+			</g>
+		</svg>
+	</div>	
+	
+	<!-- Geanimeerde pijl om de gebruiker naar verder op de pagina te sturen -->
+	<div class="arrow">
+		<span class="arrowSpan"></span>
+	</div>
+	
+	<!-- Section met een korte preview van mijn portfolio met eigen subgrid -->
+	<section class="portfolioGrid" id="portfolioPreview">
+		
+		<!-- Intro voor portfolio preview -->
+		<div class="introText oneColumn">
+			<h2>Case studies</h2>
+				<p class="subtitle">Ontwerpen samen met de eindgebruiker</p>
+				<p>Ik geloof dat het ultieme ontwerp niet bestaat. Het kan namelijk áltijd beter. Maar toch probeer ik daar zo dichtbij mogelijk te komen. In mijn ontwerpen kom ik door uitgebreid onderzoek, veelvuldig prototypen <span class="ampersand"> &amp; </span> gebruikerstesten tot een product met een ervaring die écht aansluit op de behoeften van de eindgebruiker; een oplossing waarvan ze niet wist dat het de oplossing zou zijn.
+				<br>
+				Naast deze cases heb ik veel ervaring opgedaan bij mijn vorige stage en eigen projecten. Deze kan ik hier niet neerzetten, maar ik vertel je er graag over!
+				</p>
+		</div>
+		
+		<!-- Card voor portfolio werk 1 -->
+		<div class="card card1">
+			<a href="nog_vlotter_afrekenen.html" class="cardLink">	
+				<img class="cardImage" src="images/portfolio_images/handscanner_jumbo.png" alt="Mock-up vernieuwde handscanner app Jumbo"> 
+				<div class="cardTextContainer">
+					<h3 class="cardTitle">Nóg vlotter afrekenen</h3>
+					<p class="cardSubtitle">Product design · Jumbo · 2025</p>
+				</div>
+			</a>
+		</div>	
+		
+		<!-- Card voor portfolio werk 2 -->
+		<div class="card card2">
+			<a href="nieuwsbegrip_vernieuwd.html" class="cardLink">	
+				<img class="cardImage" src="images/portfolio_images/nieuwsbegrip_mockup.png" alt="Mock-up vernieuwde Nieuwsbegrip website"> 
+				<div class="cardTextContainer">
+					<h3 class="cardTitle">Nieuwsbegrip vernieuwd</h3>
+					<p class="cardSubtitle">Product design · CED-Groep · 2024</p>
+				</div>
+			</a>
+		</div>
+
+		<!-- Card voor portfolio werk 3 
+		<div class="card card3">
+			<a href="videoreeks_zorgtechnologie.html" class="cardLink">	
+				<img class="cardImage" src="images/portfolio_images/dgg_zorgtechnologie.png" alt="Preview video zorgtechnologie"> 
+				<div class="cardTextContainer">
+					<h3 class="cardTitle">Videoreeks zorgtechnologie</h3>
+					<p class="cardSubtitle">Videobewerking · DrieGasthuizenGroep · 2024</p>
+				</div>
+			</a>
+		</div>
+		-->
+		
+
+		<!-- Card voor portfolio werk 4 -->
+		<div class="card card4">
+			<a href="hart_voor_jou.html" class="cardLink">	
+				<img class="cardImage" src="images/portfolio_images/rijnstate_box_buiten.jpg" alt="Hart voor jou box">
+				<div class="cardTextContainer">
+					<h3 class="cardTitle">Hart voor jou</h3>
+					<p class="cardSubtitle">Product design · Ziekenhuis Rijnstate · 2023</p>
+				</div>
+			</a>
+		</div>
+		
+	</section>							
+
+	<section id="brandCarousel">
+
+		<h2>Deze merken zijn langsgekomen</h2>
+
+		<div class="carousel" tabindex="-1">
+
+			<div class="carouselRow">
+				<img class="carouselLogo" src="images/brand_logos/jumbo.svg" alt="Logo Jumbo"></img>
+				<img class="carouselLogo" src="images/brand_logos/rijnstate.png" alt="Logo Rijnstate"></img>
+				<img class="carouselLogo" src="images/brand_logos/nuffic.svg" alt="Logo Nuffic"></img>
+				<img class="carouselLogo" src="images/brand_logos/rijkswaterstaat.png" alt="Logo Rijkswaterstaat"></img>
+				<img class="carouselLogo" src="images/brand_logos/nieuwsbegrip.svg" alt="Logo Nieuwsbegrip"></img>
+				<img class="carouselLogo" src="images/brand_logos/rijnijssel.png" alt="Logo Rijnijssel"></img>
+				<img class="carouselLogo" src="images/brand_logos/hogeschool_utrecht.png" alt="Logo Hogeschool Utrecht"></img>
+				<img class="carouselLogo" src="images/brand_logos/hoogte80.png" alt="Logo Hoogte80"></img>
+				<img class="carouselLogo" src="images/brand_logos/freo.svg" alt="Logo Freo"></img>
+				<img class="carouselLogo" src="images/brand_logos/gemeente_renkum.png" alt="Logo Gemeente Renkum"></img>
+				<img class="carouselLogo" src="images/brand_logos/gemeente_wageningen.png" alt="Logo Gemeente Wageningen"></img>
+			</div>
+
+			<!-- Duplicaat voor oneindige scroll-animatie -->
+			<div class="carouselRow">
+				<img class="carouselLogo" src="images/brand_logos/jumbo.svg" alt="Logo Jumbo"></img>
+				<img class="carouselLogo" src="images/brand_logos/rijnstate.png" alt="Logo Rijnstate"></img>
+				<img class="carouselLogo" src="images/brand_logos/nuffic.svg" alt="Logo Nuffic"></img>
+				<img class="carouselLogo" src="images/brand_logos/rijkswaterstaat.png" alt="Logo Rijkswaterstaat"></img>
+				<img class="carouselLogo" src="images/brand_logos/nieuwsbegrip.svg" alt="Logo Nieuwsbegrip"></img>
+				<img class="carouselLogo" src="images/brand_logos/rijnijssel.png" alt="Logo Rijnijssel"></img>
+				<img class="carouselLogo" src="images/brand_logos/hogeschool_utrecht.png" alt="Logo Hogeschool Utrecht"></img>
+				<img class="carouselLogo" src="images/brand_logos/hoogte80.png" alt="Logo Hoogte80"></img>
+				<img class="carouselLogo" src="images/brand_logos/freo.svg" alt="Logo Freo"></img>
+				<img class="carouselLogo" src="images/brand_logos/gemeente_renkum.png" alt="Logo Gemeente Renkum"></img>
+				<img class="carouselLogo" src="images/brand_logos/gemeente_wageningen.png" alt="Logo Gemeente Wageningen"></img>
+			</div>
+
+		</div>
+
+	</section>
+	
+	<!-- Section met korte call to action naar de contactpagina -->
+	<section class="CTA" id="contactCTA">
+		<h2>Contact</h2>
+		<p class="subtitle">Ben je geïnteresseerd geraakt in mij of in mijn werk? Ik bespreek graag wat we samen kunnen bereiken!</p>
+			<br>
+		<a class="linkButton" href="contact.html">Neem contact met mij op</a>
+	</section>
+	
+</main>
+	
+<!-- Simpele footer met link om terug naar boven te gaan en copyright tekst -->	
+<footer>
+	
+	<div class="footerContainer">
+		<a href="#headerSkip" title="Ga terug naar boven">&uarr; Ga terug naar boven &uarr;</a>
+		<p id="footerCopyrightText">© 2025 Jop Marijnissen - Alle rechten voorbehouden<br>
+		Ontworpen <span class="ampersand"> &amp; </span> ontwikkeld door Jop Marijnissen
+		</p>
+	</div>
+	
+</footer>
+	
+</body>
+	
+</html>

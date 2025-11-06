@@ -1,0 +1,1251 @@
+/* =============================================================================== */
+/* =============================================================================== */
+/* =============================== Algemene CSS ================================== */
+/* =============================================================================== */
+/* =============================================================================== */
+
+:root {
+	--color-bg-primary-1: #221100;
+	--color-bg-primary-2: #221800; 
+	--color-bg-secondary: #2dcf5e;
+	--color-text-primary: #fffbd7;
+	--color-text-secondary: #c0bfb3;
+	--color-text-light: #ffffff;
+	--color-text-dark: #141414;
+	--color-accent: #3bf172;
+	--color-error: #ff4221;
+	--color-shadow: #000000; 
+	--color-focus: #176cff; 
+
+	--color-overlay-dark: rgba(0, 0, 0, 0.9); 
+	--color-card-shadow-dark: rgba(0, 0, 0, 0.9);
+	--color-card-shadow-accent: rgba(10, 27, 15, 0.9);
+
+	--font-display: ClashDisplay-Variable, sans-serif;
+	--font-body: GeneralSans-Variable, sans-serif;
+	--font-stylized: Zodiak-Variable, sans-serif;
+
+	--spotlight-radius: 15vw;
+	--spotlight-x: -1000px; /* offscreen default */
+	--spotlight-y: -1000px; /* offscreen default */
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	max-width: 1400px;
+	background: linear-gradient(200deg, var(--color-bg-primary-1), var(--color-bg-primary-2));
+	margin: auto;
+	font-size: 1rem;
+	text-wrap: pretty;
+}
+
+main {	
+	min-height: calc(100vh - 400px);
+}
+
+:focus {
+	outline: none;
+}
+
+:focus-visible {
+	box-shadow: 
+	0 0 0 4px var(--color-text-dark),     /* inner blue */
+    0 0 0 8px var(--color-focus),     /* inner blue */
+    0 0 0 12px white;     /* outer white */
+}
+
+/* ================================================================ */
+
+.gridContainer {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	margin: 40px 15px 0px 15px;
+	gap: 30px;
+}
+
+header {
+	margin: 0 10px;
+	height: 70px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#headerSkip {
+	position: absolute;
+	left: -1000px;
+}
+
+.headerWordmark {
+	padding: 5px;
+	font-family: var(--font-display);
+	font-weight: 400;
+	color: var(--color-text-primary);
+	font-size: 1.9rem;
+	line-height: 1.2em;
+	text-decoration: none;
+	transition: transform 0.2s ease;
+	border-radius: 10px;
+}
+
+.headerWordmark:hover {
+	color: var(--color-accent);
+	text-decoration: none;
+	transform: scale(1.1) rotate(-2deg);
+}
+
+.navContent {
+	padding: 15px;
+	border-radius: 10px;
+}
+
+.navContent ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 10px;
+}
+
+.navContent a {
+	font-size: 1rem;
+	text-decoration: none;
+	font-weight: 500;
+	font-family: var(--font-body);
+	color: var(--color-text-light);
+	text-transform: uppercase;
+	padding: 0 4px;
+	border-radius: 5px;
+}
+
+.navContent li {
+	padding: 8px;
+	transition: transform 0.2s ease;
+}
+
+.navContent li:hover {
+	transform: scale(1.1) rotate(-4deg);
+}
+
+.navContent li.current {
+	background-color: var(--color-accent);
+	border-radius: 10px;
+}
+
+.navContent li.current:hover {
+	background-color: var(--color-bg-secondary);
+}
+
+.navContent li.current a {
+	color: var(--color-text-dark);
+}
+
+/* ======================== Text styles ========================= */
+
+h1 {
+	font-size: min(12vw, 4.5rem);
+	line-height: min(12vw, 4.5rem);
+	font-family: var(--font-display);
+	font-weight: 600;
+	color: var(--color-text-primary);
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 2.2rem;
+	font-family: var(--font-display);
+	font-weight: 500;
+	color: var(--color-accent);
+	text-transform: uppercase;
+}
+
+h3 {
+	font-size: 1.4rem;
+	font-family: var(--font-display);
+	font-weight: 500;
+	color: var(--color-text-primary);
+}
+
+h3.overMijH3 {
+	font-size: 1.4rem;
+	font-family: var(--font-display);
+	font-weight: 600;
+	color: var(--color-text-primary);
+}
+
+p, a {
+	font-size: 1.1rem;
+	line-height: 1.5rem;
+	font-family: var(--font-body);
+	font-weight: 450;
+	font-style: normal;
+	color: var(--color-text-primary);
+}
+
+p.subtitle {
+	font-size: 1.4rem;
+	line-height: 1.8rem;
+	font-family: var(--font-display);
+	font-weight: 500;
+	color: var(--color-text-primary);
+}
+
+.overMijFunctieInfo {
+	font-size: 1.2rem;
+	font-family: var(--font-display);
+	font-weight: 500;
+	color: var(--color-text-secondary);
+}
+
+a {
+	text-decoration: none;
+}
+
+a.hyperlink {
+	color: var(--color-accent);
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:active {
+	color: var(--color-accent);
+}
+
+/* Alt tekst */
+img {
+	font-size: 1.5rem;
+	font-family: var(--font-body);
+	font-weight: 300;
+	font-style: normal;
+	color: var(--color-text-secondary);
+}
+
+#heroComma {
+	display: inline-block;
+	font-size: 1em;
+	font-family: var(--font-stylized);
+	font-weight: 700;
+	color: var(--color-accent);
+	transform: rotate(15deg);
+	padding-right: 1rem;
+}
+
+.noWrap {
+	white-space: nowrap;
+}
+
+.ampersand {
+	display: inline-block;
+	font-family: var(--font-ampersand);
+	line-height: 0;
+	font-weight: 700;
+	color: var(--color-accent);
+	transform: rotate(5deg);
+}
+
+.emphasis {
+	display: inline-block;
+	transform: rotate(-1deg);
+	font-weight: 600;
+	color: var(--color-accent);
+}
+
+.divider {
+	color: var(--color-accent);
+	font-weight: 600;
+}
+
+.quote {
+	font-size: 1em;
+	font-style: italic;
+}
+
+/* ==================================================== */
+
+.heroImage {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	border-radius: 10px;
+	transform: rotate(-5deg);
+}
+
+.heroImage img {
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	object-fit: cover;
+}
+
+.heroRing {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, 2%);
+	height: 96%;
+	aspect-ratio: 1 / 1;
+	pointer-events: none;
+}
+
+.heroRing text {
+	font-family: var(--font-display);
+	font-weight: 600;
+	fill: var(--color-text-primary);
+	font-size: 0.423rem;
+}
+
+.heroRingText {
+	transform-origin: 50% 50%;
+	animation: heroRingSpin 40s linear infinite;
+}
+
+@keyframes heroRingSpin {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+
+/* Wanneer er meerdere knoppen bij elkaar staan ze in een flexbox zetten */
+.buttonContainer {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+button, .linkButton, #versturen {
+	display: inline-flex;
+	align-items: center;
+	gap: 5px;
+	border-radius: 10px;
+	color: var(--color-text-dark);
+	background-color: var(--color-accent);
+	padding: 10px 20px;
+	font-family: var(--font-body);
+	font-size: 1em;
+	font-weight: 600;
+	cursor: pointer;
+	text-decoration: none;
+	transition: transform 0.2s ease;
+	border: none;
+}
+
+button:hover, .linkButton:hover, #versturen:hover {
+	background-color: var(--color-bg-secondary);
+	text-decoration: none;
+	transform: scale(1.1) rotate(-4deg);
+	box-shadow: 0 2px var(--color-shadow);
+}
+
+.buttonSVG {
+	fill: var(--color-text-dark);
+}
+
+.arrow {
+    position: relative;
+	width: 100%;
+	height: 200px;
+}
+
+.arrowSpan {
+	position: relative;
+	top: 30px;
+    left: 50%;
+    display: block;
+    width: max(30px, 1.5vw);
+    height: max(30px, 1.5vw);
+    border-bottom: 5px solid var(--color-accent);
+    border-right: 5px solid var(--color-accent);
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+}
+
+/* Animate van de pijl met keyframes */
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+
+footer {
+	position: relative;
+	bottom: 0;
+	height: 300px;
+	width: calc(100% - 15px);
+	margin-bottom: 20px;
+}
+
+.footerContainer {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+footer a {
+	display: inline-block;
+	padding: 10px;
+	font-size: 1em;
+	color: var(--color-text-secondary);
+	border-radius: 10px;
+}
+
+#footerCopyrightText {
+	display: inline-block;
+	padding: 10px;
+	font-size: 1em;
+	color: var(--color-text-secondary);
+}
+
+/* --------------------------------------- */
+/* ------ CSS voor de contactpagina ------ */
+/* --------------------------------------- */
+
+.contactFormulier {
+	width: 100%;
+}
+
+label {
+	position: relative;
+	left: 20px;
+	bottom: 5px;
+	color: var(--color-text-primary);
+	font-family: var(--font-display);
+	font-weight: 400;
+	font-size: 1.2em;
+	border-radius: 5px;
+}
+
+form div {
+	margin-bottom: 10px;
+}
+
+input, textarea { 
+	background-color: transparent;
+	border-radius: 10px;
+	border: 2px solid var(--color-accent);
+	color: var(--color-text-primary);
+	padding: 10px 20px;
+	display: block;
+	width: calc(100% - 40px);
+	font-family: open-sans, sans-serif;
+	font-weight: 300;
+	font-size: 1em;
+}
+
+textarea { 
+	height: 200px;
+	resize: none;
+}
+
+/* Rode rand voor foutief ingevulde velden. Wordt geupdate via form_validation.js */
+input.invalid, textarea.invalid {
+    border-color: var(--color-error);
+}
+
+.errorMessage {
+	visibility: hidden;
+	font-size: 0.8em;
+	font-family: var(--font-body);
+	font-weight: 500;
+	font-style: normal;
+	color: var(--color-error);
+}
+
+#versturen {
+	width: 100%;
+}
+
+/* -------------------------------------------------------------- */
+/* ------ CSS voor het portfolio grid en de card elementen ------ */
+/* -------------------------------------------------------------- */
+
+.portfolioGrid {
+	display: grid;
+	grid-template-columns: subgrid;
+	gap: 30px;
+	margin-bottom: 100px;
+}
+
+.card {
+	position: relative;
+	text-align: left;
+	height: 100%;
+	max-height: 250px;
+	border-radius: 10px;
+	box-shadow: inset 0rem -10rem 3rem -3rem var(--color-card-shadow-dark);
+	border: 2px solid var(--color-accent);
+	transition: 0.2s ease;
+}
+
+.card:hover {
+	box-shadow: inset 0rem -10rem 3rem -3rem var(--color-card-shadow-accent);
+}
+
+.cardImage {
+	position: relative;
+	z-index: -1;
+	border-radius: 5px;
+}
+
+.cardTextContainer {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	bottom: 0px;
+	margin: 10px;
+}
+
+.cardTitle, .cardSubtitle {
+	color: var(--color-text-light);
+	display: inline-block;
+	text-shadow: 0px 1px var(--color-shadow);
+	transition: transform 0.2s ease;
+}
+
+.card:hover .cardTitle, .card:hover .cardSubtitle {
+	transform: translateY(-2px) scale(1.03) rotate(-1deg);
+	text-shadow: 0px 2px var(--color-shadow);
+}
+
+a.cardLink {
+	display: block;
+   	height: 100%;
+   	width: 100%;
+   	text-decoration: none;
+	border-radius: 10px;
+}
+
+.card1 img, .card2 img, .card3 img, .card4 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolioVideo {
+	position: relative;
+	width: 100%;
+	padding-top: 56.25%;
+}
+
+.portfolioVideo iframe {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.portfolioFullImage img {
+	width: 100%;
+	height: 100%;
+	max-height: 500px;
+	border-radius: 10px;
+	object-fit: cover;
+}
+
+/* ----------------------------------------------------- */
+/* ------ CSS voor het geanimeerde brand carousel ------ */
+/* ----------------------------------------------------- */
+	
+#brandCarousel {
+	grid-column: 1 / -1;
+	grid-row: 5;
+	margin-bottom: 100px;
+	padding-bottom: 25px;
+	overflow: hidden;
+}
+
+.carousel {
+	margin-top: 10px;
+	padding: 50px 0;
+	display: flex;
+	overflow-x: auto;
+	background-color: var(--color-text-primary);
+	border-radius: 10px;
+	transform: rotate(-2deg);
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+
+.carousel::-webkit-scrollbar {
+	display: none;
+	width: 0;
+	height: 0;
+}
+
+.carouselRow {
+	display: flex;
+	animation: spin 25s infinite linear;
+	align-items: center;
+	justify-content: center;
+	gap: 5em;
+	padding-right: 5em;
+}
+
+.carouselLogo {
+	max-width: 150px;
+	max-height: 75px;
+	object-fit: contain;
+}
+
+@keyframes spin {
+	from {translate: 0;}
+	to {translate: -100%}
+}
+
+/* ----------------------------------------- */
+/* ------ CSS voor de over mij pagina ------ */
+/* ----------------------------------------- */
+
+/* Bepaalde elementen alleen zichtbaar maken in print. Voor het printen is een losse stylesheet print.css die dit juist zichtbaar maakt */
+.printOnly {
+	display: none;
+}
+
+.overmijMain article, .overmijSidebar article {
+	padding: 1.5em 0;
+}
+
+.overmijMain article:not(:last-of-type) {
+	border-bottom: 1px solid var(--color-text-secondary);
+}
+
+.overmijMain article h3:not(:first-of-type) {
+	margin-top: 1em;
+}
+
+#karakter ul {
+	font-size: 1.1em;
+	font-family: var(--font-body);
+	font-weight: 450;
+	font-style: normal;
+	list-style: disc;
+	padding-left: 20px;
+}
+
+#karakter li {
+	color: var(--color-text-primary);
+}
+
+/* Opsommingsteken groen maken */
+#karakter li::marker {
+	color: var(--color-accent);
+}
+
+/* ----------------------------------------------------- */
+/* ------ Grayscale overlay and spotlight cursor ------ */
+/* ----------------------------------------------------- */
+
+/* Full-page overlay that applies fifty-tone filter to the backdrop.
+   A circular hole around the cursor reveals full color. */
+.toneBackdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #000;
+	pointer-events: none;
+	z-index: -2147483646; /* below eveything (including .fiftyToneOverlay and cursor) */
+	-webkit-mask-image: radial-gradient(circle var(--spotlight-radius) at var(--spotlight-x) var(--spotlight-y), transparent 0, transparent calc(var(--spotlight-radius) + 0.1px), black calc(var(--spotlight-radius) + 0.2px));
+	mask-image: radial-gradient(circle var(--spotlight-radius) at var(--spotlight-x) var(--spotlight-y), transparent 0, transparent calc(var(--spotlight-radius) + 0.1px), black calc(var(--spotlight-radius) + 0.2px));
+}
+
+.fiftyToneOverlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	pointer-events: none;
+	z-index: 2147483647; /* below custom cursor */
+	/* Use SVG filter when supported - fifty tone */
+	-webkit-backdrop-filter: url(#fiftyToneFilter);
+	backdrop-filter: url(#fiftyToneFilter);
+	/* Punch a hole where the cursor is */
+	-webkit-mask-image: radial-gradient(circle var(--spotlight-radius) at var(--spotlight-x) var(--spotlight-y), transparent 0, transparent calc(var(--spotlight-radius) + 0.1px), black calc(var(--spotlight-radius) + 0.2px));
+	mask-image: radial-gradient(circle var(--spotlight-radius) at var(--spotlight-x) var(--spotlight-y), transparent 0, transparent calc(var(--spotlight-radius) + 0.1px), black calc(var(--spotlight-radius) + 0.2px));
+}
+
+/* Fallback to approximate grayscale posterization when custom filter/backdrop-filter isn't supported */
+@supports not ((backdrop-filter: blur(0))) {
+	.fiftyToneOverlay {
+		/* Approximation: grayscale + high contrast to approach 3 tones */
+		-webkit-backdrop-filter: grayscale(1) contrast(180%);
+		backdrop-filter: grayscale(1) contrast(180%);
+	}
+}
+
+/* Hide system cursor when spotlight is active on devices with a fine pointer */
+@media (pointer: fine) {
+	body.has-spotlight,
+	html.has-spotlight {
+		cursor: none;
+	}
+
+	/* Ensure no element re-enables the OS cursor while spotlight is active */
+	body.has-spotlight *,
+	body.has-spotlight *:hover,
+	html.has-spotlight *,
+	html.has-spotlight *:hover {
+		cursor: none !important;
+	}
+}
+
+/* Opt-out: disable the overlay entirely (restore full color) */
+body.three-tone-disabled .fiftyToneOverlay {
+	display: none;
+}
+
+/* Keep specific elements in full color by drawing them above the overlay.
+   Use sparingly as this affects stacking. */
+.color-keep {
+	position: relative;
+	z-index: 2147483648;
+}
+
+/* Visible custom cursor */
+.spotlightCursor {
+	position: fixed;
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background: var(--color-accent);
+	filter: drop-shadow(0 0 2px var(--color-shadow));
+	border: 1px solid var(--color-shadow);
+	pointer-events: none;
+	z-index: 2147483650;
+	transform: translate(-50%, -50%);
+}
+
+/* Pointer-mode custom cursor */
+.spotlightCursorPointer {
+	position: fixed;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: var(--color-text-primary);
+	filter: drop-shadow(0 0 4px var(--color-shadow));
+	border: 1px solid var(--color-shadow);
+	pointer-events: none;
+	z-index: 2147483650;
+	transform: translate(-50%, -50%);
+}
+
+#spotlightSwitch {
+	display: inline-block;
+	padding: 5px;
+}
+
+#spotlightSwitch svg {
+	vertical-align: middle;
+}
+
+#spotlightSwitch .switch {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	width: 40px;
+	height: 20px;
+	top: 0;
+	left: 0;
+	transition: transform 0.2s ease;
+	pointer-events: none;
+}
+
+#spotlightSwitch .switch:hover {
+	transform: scale(1.1) rotate(-4deg);
+}
+
+/* Hide default HTML checkbox */
+#spotlightSwitch .switch input {
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+	z-index: 1;
+	pointer-events: auto;
+}
+
+#spotlightSwitch .switch input:focus-visible + .slider {
+	box-shadow: 
+	0 0 0 4px var(--color-text-dark),     /* inner blue */
+    0 0 0 8px var(--color-focus),     /* inner blue */
+    0 0 0 12px white;     /* outer white */
+}
+
+#spotlightSwitch .slider {
+	position: absolute;
+	cursor: pointer;
+	inset: 0;
+	background-color: transparent;
+	-webkit-transition: .2s;
+	transition: .2s;
+	border: 2px solid var(--color-text-primary);
+}
+
+#spotlightSwitch .slider:before {
+	position: absolute;
+	content: "";
+	height: 12px;
+	width: 12px;
+	left: 2px;
+	top: 2px;
+	background-color: var(--color-accent);
+	-webkit-transition: .2s;
+	transition: .2s;
+}
+
+#spotlightSwitch input:checked + .slider {
+	background-color: var(--color-accent);
+}
+
+#spotlightSwitch input:checked + .slider:before {
+	background-color: var(--color-text-dark);
+}
+
+#spotlightSwitch input:checked + .slider:before {
+	-webkit-transform: translateX(20px);
+	-ms-transform: translateX(20px);
+	transform: translateX(20px);
+}
+
+#spotlightSwitch .slider.round {
+	border-radius: 999px;
+}
+
+#spotlightSwitch .slider.round:before {
+	border-radius: 50%;
+}
+
+::-moz-selection { /* Code for Firefox */
+	color: var(--color-text-dark);
+	background: var(--color-accent);
+}
+  
+::selection {
+	color: var(--color-text-dark);
+	background: var(--color-accent);
+}
+
+/* ===================================================================== */
+/* ===================================================================== */
+/* ============= Media query voor minstens 768px (tablets) ============= */
+/* ===================================================================== */
+/* ===================================================================== */
+
+@media screen and (min-width: 768px) {
+	
+	/* ------ Algemene CSS ------ */
+
+	.navContent a {
+		font-size: 1.1rem;
+	}
+	
+  	.gridContainer {
+		margin-top: 10vh;
+   		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.gridContainer:has(.portfolioVideo) { 
+		margin-top: 30px;
+	}
+	
+	.pageHeader {
+		grid-column: 1 / span 3;
+		grid-row: 2;
+	}
+	
+	#headerAsideLeft {
+		grid-column: 1 / span 2;
+		grid-row: 1;
+	}
+	
+	h1 {
+		font-size: max(7vw, 4.5em);
+		line-height: max(7vw, 4.5rem);
+	}
+	
+	h2 {
+		font-size: 2.3em;
+	}
+	
+	.heroImage {
+		grid-column: 3;
+		grid-row: 1;
+		width: 50vw;
+		padding: none;
+	}
+	
+	.arrow {
+		grid-column: 1 / span 3;
+	}
+	
+	.footerContainer {
+		flex-direction: row;
+		justify-content: space-between;
+		vertical-align: bottom;
+	}
+
+	.footerContainer a {
+		margin-top: auto;
+	}
+
+	#footerCopyrightText {
+		text-align: right;
+	}
+	
+	#portfolioPreview {
+		grid-row: 3 / span 3;
+		margin-bottom: 200px;
+	}
+	
+	.CTA {
+		display: flex;
+    	flex-direction: column;
+   		justify-content: center;
+    	align-items: center;
+		grid-column: 1 / span 3;
+		padding: 100px 0px;
+		text-align: center;
+		border-radius: 10px;
+	}
+
+	.CTA > a {
+		margin-top: 20px;
+	}
+
+	#contactCTA {
+		grid-row: 7;
+	}
+
+	#caseCTA {
+		grid-row: 13;
+	}
+
+	#brandCarousel {
+		grid-column: 1 / span 3;
+		grid-row: 6;
+		margin-bottom: 200px;
+	}
+
+	
+	/* --------------------------------------- */
+	/* ------ CSS voor de contactpagina ------ */
+	/* --------------------------------------- */
+	
+	.contactFormulier {
+		grid-column: 1 / span 2;
+		grid-row: 2;
+	}
+
+	.contactAside {
+		grid-row: 1 / span 2;
+		grid-column: 3;
+	}
+	
+	/* -------------------------------------------------------------- */
+	/* ------ CSS voor het portfolio grid en de card elementen ------ */
+	/* -------------------------------------------------------------- */
+	
+	.portfolioGrid  {
+		grid-column: 1 / span 3;
+		grid-template-rows: auto;
+	}
+	
+	.portfolioVideo {
+		grid-row: 1;
+		grid-column: 1 / span 3;
+	}
+
+	.portfolioHeading {
+		grid-row: 2;
+		grid-column: 1 / span 3;
+		margin-bottom: 150px;
+		text-align: center;
+	}
+
+	#portfolioGrid1 {
+		grid-row: 3 / span 3;
+	}
+	
+	#portfolioGrid2 {
+		grid-row: 7 / span 3;
+	}
+	
+	#portfolioGrid3 {
+		grid-row: 10 / span 3;
+	}
+	
+	.introText {
+		grid-column: 1 / span 3;
+		grid-row: 1;
+	}
+
+	.portfolioFullImage {
+		grid-column: 1 / span 3;
+		grid-row: 2 / span auto;		
+	}
+
+	.card {
+		max-height: 500px;
+	}
+	
+	.card1 {
+		grid-column: 1 / span 2;
+		grid-row: 2;
+	}
+	
+	.card2 {
+		grid-column: 3;
+		grid-row: 2;
+	}
+	
+	/*
+	.card3 {
+		grid-column: 1;
+		grid-row: 3;
+		max-height: 250px;
+	}
+		*/
+	
+	.card4 {
+		grid-column: 1 / span 3;
+		grid-row: 3;
+		max-height: 250px;
+	}
+	
+	
+	/* ----------------------------------------- */
+	/* ------ CSS voor de over mij pagina ------ */
+	/* ----------------------------------------- */
+	
+	.overmijGrid {
+		display: grid;
+		grid-column: 1 / span 3;
+		grid-row: 2;
+		grid-template-columns: subgrid;
+		grid-template-rows: subgrid;
+	}
+	
+	.overmijMain {
+		grid-column: 2 / span 2;
+	}
+	
+	.overmijSidebar {
+		grid-column: 1;
+	}
+	
+	.overmijSidebar article {
+		padding: 20px;
+		margin-bottom: 0px;
+		border-radius: 10px;
+		border: 1px solid var(--color-text-secondary);
+	}
+	
+	#nevenactiviteiten {
+		margin-bottom: 0px;
+	}
+	
+}
+
+/* ====================================================================== */
+/* ====================================================================== */
+/* ============= Media query voor minstens 1024px (desktop) ============= */
+/* ====================================================================== */
+/* ====================================================================== */
+
+@media screen and (min-width: 1024px) {
+	
+	.gridContainer {
+		grid-template-columns: repeat(4, 1fr);
+	}
+	
+	.pageHeader {
+		grid-column: 1 / span 4;
+		grid-row: 1;
+	}
+	
+	.heroText {
+		grid-column: 1 / span 2;
+	}
+	
+	.heroImage {
+		width: 100%;
+		grid-column: 3 / span 2;
+		grid-row: 1;
+	}
+	
+	.arrow {
+		grid-column: 1 / span 4;
+	}
+	
+	.CTA {
+		grid-column: 1 / span 4;
+		padding: 80px 40px;
+	}
+
+	#brandCarousel {
+		grid-column: 1 / span 4;
+	}
+
+	.carouselLogo {
+		max-width: 150px;
+		max-height: 75px;
+		object-fit: contain;
+	}
+
+	/* --------------------------------------- */
+	/* ------ CSS voor de contactpagina ------ */
+	/* --------------------------------------- */
+	
+	.contactFormulier {
+		grid-column: 1 / span 2;
+		grid-row: 2;
+	}
+
+	.contactAside {
+		grid-row: 1 / span 2;
+		grid-column: 3 / span 2;
+	}
+
+	.contactAside div:not(:last-of-type) {
+		margin-bottom: 20px;
+	}
+
+	.contactAside .heroImage {
+		width: 90%;
+		margin: auto;
+	}
+	
+	/* -------------------------------------------------------------- */
+	/* ------ CSS voor het portfolio grid en de card elementen ------ */
+	/* -------------------------------------------------------------- */
+	
+	.portfolioVideo {
+		grid-row: 1;
+		grid-column: 1 / span 4;
+	}
+
+	.portfolioHeading {
+		grid-row: 2;
+		grid-column: 1 / span 4;
+	}
+
+	.portfolioGrid {
+		grid-template-rows: auto;
+		grid-column: 1 / span 4;
+		gap: 30px;
+	}
+	
+	.introText {
+		grid-column: 1 / span 2;
+	}
+
+	.introText.oneColumn {
+		grid-column: 1 / span 1;
+	}
+		
+	.portfolioFullImage {
+		grid-column: 3 / span 2;
+	}
+
+	.introText .alternate{
+		grid-column: 3 / span 2;
+	}
+
+	.alternate .portfolioFullImage {
+		grid-column: 1 / span 2;	
+	}
+
+	.introText.noImage {
+		grid-column: 1 / span 4;
+	}
+	
+	.card1 {
+		grid-column: 2 / span 2;
+		grid-row: 1 / span 2;
+		height: 500px;
+	}
+	
+	.card2 {
+		grid-column: 4;
+		grid-row: 1 / span 2;
+		height: 500px;
+	}
+	
+	/*
+	.card3 {
+		grid-column: 2;
+		grid-row: 3;
+	}
+	*/
+	
+	.card4 {
+		grid-column: 2 / span 3;
+		grid-row: 3;
+	}
+	
+	/* ----------------------------------------- */
+	/* ------ CSS voor de over mij pagina ------ */
+	/* ----------------------------------------- */
+	
+	.overmijGrid {
+		grid-column: 1 / span 4;
+	}
+	
+	.overmijMain {
+		grid-column: 2 / span 3;
+	}
+
+}
+
+/* ====================================================================================== */
+/* ====================================================================================== */
+/* ============= Media query voor minstens 1400px (max breedte van de body) ============= */
+/* ====================================================================================== */
+/* ====================================================================================== */
+
+@media screen and (min-width: 1400px) {
+	
+	h1 {
+		font-size: 6.2em;
+		line-height: 6.2rem;
+	}
+
+	.introText {
+		grid-column: 1;
+	}
+		
+	.portfolioFullImage {
+		grid-column: 2 / span 3;
+	}
+
+	.alternate .introText {
+		grid-column: 4;
+	}
+
+	.alternate .portfolioFullImage {
+		grid-column: 1 / span 3;	
+	}
+	
+}

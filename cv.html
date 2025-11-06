@@ -1,0 +1,349 @@
+<!doctype html>
+
+<html lang="nl">
+	
+<head>
+	
+	<meta charset="UTF-8">
+		
+	<title>CV · Jop Marijnissen</title>
+	<link rel="icon" type="image/x-icon" href="images/favicon.png">
+	
+	<!-- Stylesheet die alle standaard ingestelde waardes reset/naar 0 brengt voor makkelijkere aanpassingen -->
+	<link rel="stylesheet" href="styles/reset.css">
+		
+	<!-- Main stylesheet -->
+	<link rel="stylesheet" href="styles/main.css">
+	
+	<!-- Print stylesheet -->
+	<link rel="stylesheet" href="styles/print.css">
+		
+	<!-- Lettertypes importen -->
+	<link rel="stylesheet" href="styles/general-sans.css">
+	<link rel="stylesheet" href="styles/clash-display.css">
+	<link rel="stylesheet" href="styles/zodiak.css">
+		
+	<!-- Dit geeft de browser instructies over hoe het om moet gaan met de dimensies van de browser en het schalen van content -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Dit geeft aan welke titel, beschrijving, afbeelding en url gebruikt moet worden in de link preview op bijv. social media -->
+	<meta property="og:title" content="Showcase site Jop Marijnissen">
+	<meta property="og:type" content="website">
+	<meta property="og:description" content="Hoi! Ik ben Jop Marijnissen. Een jonge, gepassioneerde product designer die door een nieuwsgierige lens naar de wereld kijkt. Ik sta voor gebruiksvriendelijke producten die nét dat stapje verder gaan en iedereens dag wat beter, makkelijker mooier maken. Neem een kijkje op mij of mijn cases!">
+	<meta property="og:url" content="https://jopmarijnissen.sajoan.com">
+	<meta property="og:image" content="images/portretfoto.jpg">
+	
+</head>
+	
+<body>
+
+	<script src="js/main.js"></script>
+	
+<header class="notPrintable">
+
+	<!-- Skip knop voor toegankelijkheid-->
+	<a href="#mainContent" id="headerSkip">Ga naar de inhoud</a>
+	
+	<!-- Wordmark links in de header-->
+	<a href="index.html" title="Ga naar de homepagina" class="headerWordmark">JM</a>
+
+		<!-- Lijst van navigatielinks -->
+		<nav class="navContent">
+			<ul>
+				<li><a href="index.html" title="Ga naar de homepagina">Home</a></li>
+				<li class="current"><a href="cv.html" title="Ga naar de pagina van mijn CV">CV</a></li>
+				<li><a href="contact.html" title="Ga naar de contactpagina">Contact</a></li>
+			</ul>
+		</nav>
+
+	<div id="spotlightSwitch">
+
+		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fffbd7">
+			<path d="M516-82q-9 2-18 2h-18q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480v18q0 9-2 18l-78-24v-12q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93h12l24 78Zm305 22L650-231 600-80 480-480l400 120-151 50 171 171-79 79Z"/>
+		</svg>
+
+		<label class="switch" title="Schakel spotlight modus in/uit">
+			<input type="checkbox" id="spotlightToggle"  aria-label="Schakel spotlight modus in/uit">
+			<span class="slider round"></span>
+		</label>
+
+	</div>
+
+</header>
+
+<!-- Alle main content van de pagina binnen een grid -->
+<main class="gridContainer" id="mainContent">
+	
+	
+	<!-- Section met header en intro van de pagina, met een andere titel wanneer de pagina uitgeprint wordt -->
+	<section class="pageHeader" id="headerAsideLeft">
+		
+		<h1 class="notPrintable">OVER MIJ</h1>
+		<h1 class="printOnly">CV JOP MARIJNISSEN</h1>
+		
+		<p>Op jonge leeftijd ben ik al de Adobe Suite in gedoken en heb ik mijn eerste stapjes gezet in Photoshop. Nu, als vierdejaars student Communication &amp; Multimedia Design en met bijna vier jaar ervaring in de communicatiewereld, zoek ik voortdurend naar nieuwe mogelijkheden en technologieën om mijn vaardigheden te verbeteren <span class="ampersand">&amp;</span> de wereld om me heen fijner te maken. Ik ben gedreven, precies en enthousiast. Al helemaal als het om product design gaat.</p>
+
+		<br>
+
+		<div class="buttonContainer notPrintable">
+			
+			<button onClick="window.print()">
+				<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" class="buttonSVG"><path d="M640-640v-120H320v120h-80v-200h480v200h-80Zm-480 80h640-640Zm560 100q17 0 28.5-11.5T760-500q0-17-11.5-28.5T720-540q-17 0-28.5 11.5T680-500q0 17 11.5 28.5T720-460Zm-80 260v-160H320v160h320Zm80 80H240v-160H80v-240q0-51 35-85.5t85-34.5h560q51 0 85.5 34.5T880-520v240H720v160Zm80-240v-160q0-17-11.5-28.5T760-560H200q-17 0-28.5 11.5T160-520v160h80v-80h480v80h80Z"/></svg>
+				Print mijn CV
+			</button>
+
+			<a href="downloadable/CV_Jop_Marijnissen.pdf" download class="linkButton">
+				<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" class="buttonSVG"><path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg>
+				Download mijn CV
+			</a>
+
+		</div>
+		
+	</section>
+	
+	<!-- Hero image bovenaan pagina -->
+	<div class="heroImage">
+		<img src="images/portretfoto.jpg" alt="Portretfoto van Jop Marijnissen">
+		<svg class="heroRing notPrintable" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+			<defs>
+				<path id="heroCirclePath" d="M50,50 m-45,0 a45,45 0 1,1 90,0 a45,45 0 1,1 -90,0" />
+			</defs>
+			<g class="heroRingText">
+				<text>
+					<textPath href="#heroCirclePath" startOffset="0%">Nice je te ontmoeten! Nice je te ontmoeten! Nice je te ontmoeten! Nice je te ontmoeten!</textPath>
+				</text>
+			</g>
+		</svg>
+	</div>	
+	
+	<!-- Div met mijn "over mij" CV informatie met eigen subgrid -->
+	<div class="overmijGrid">
+		
+		<!-- Main section met werkervaring, opleidingen en nevenactiviteiten -->
+		<div class="overmijMain">
+			
+			<!-- Article over werkervaring -->
+			<article id="werkervaring">
+				
+				<h2>Werkervaring</h2>
+				
+					<br>
+			
+				<h3 class="overMijH3">Medewerker communicatie</h3>
+					<p class="overMijFunctieInfo">Dec. 2021 - Heden</p>
+					<a class="overMijFunctieInfo" href="https://www.driegasthuizengroep.nl/">DrieGasthuizenGroep</a>
+						<br>
+					<p>Als medewerker communicatie ben ik verantwoordelijk voor onder meer het bedenken en maken van visuele communicatiemiddelen (zoals infographics), het bewerken van video's en het beheren/bijhouden van ons intranet en onze websites.</p>
+				
+					<br>
+			
+			</article>
+			
+
+			<!-- Article over stages -->
+			<article id="stages">
+				
+				<h2>Stages</h2>
+				
+					<br>
+			
+				<h3 class="overMijH3">UX Designer <span class="ampersand">&amp;</span> Researcher (Meeloopstage)</h3>
+					<p class="overMijFunctieInfo">Sep. 2024 - Jan. 2025</p>
+					<p class="overMijFunctieInfo">Meeloopstage · <a class="overMijFunctieInfo" href="https://www.eight.nl">Eight</a></p>
+						<br>
+					<p>Tijdens mijn stage bij Eight heb ik veel kneepjes van het UX vak opgestoken. Ik heb zelfstandig gebruiksonderzoek uitgevoerd, design systems en documentatie opgezet, en diverse prototypes ontwikkeld en ontwerpen gemaakt voor diverse componenten en pagina's. Ik heb hier volwaardig meegedraaid in het team, onder andere in opdracht van Nuffic, Rijnijssel, Rijkswaterstaat <span class="ampersand">&amp;</span>Freo. </p>
+
+					<br>
+
+					<a class="overMijFunctieInfo" href="https://www.linkedin.com/in/jopmarijnissen/#recommendations">Testimonial Sayn Hendriks (Stagebegeleider)</a>
+					<p class="quote">"Jop was een geweldige UX stagiair bij Eight. 
+						<br>
+						Hij pakte feedback snel op en verbeterde zichzelf continu. Streven naar beter met maximale inzet is wat hem typeert! Ook zijn communicatie over werkzaamheden was boven verwachting en wist hij zijn werk overtuigend te presenteren.
+						<br>
+						Jop voert niet alleen uit. Hij ontwerpt processen, kan zijn keuzes goed toelichten en stuurt zichzelf en zijn proces bij waar dat nodig is. Bij ieder project dacht hij proactief mee en hield hij rekening met kaders zoals; tijd, budget en klantwensen. 
+						<br>
+						Kortom, Jop heeft zijn stage echt fantastisch gedaan. Hij heeft een nieuwsgierige en kritische houding, waarmee hij volgens mij nog veel kan bereiken in de UX-wereld!"
+					</p>
+			
+			</article>
+			
+			
+			<!-- Article over opleidingen -->
+			<article id="opleidingen">
+				
+				<h2>Opleidingen</h2>
+				
+					<br>
+			
+					<h3 class="overMijH3">Communication <span class="ampersand">&amp;</span> Multimedia design</h3>
+					<p class="overMijFunctieInfo">Sep. 2022 - Heden</p>
+					<p class="overMijFunctieInfo">Hbo bachelor · HAN University of Applied Sciences</p>
+					<br>
+					<p> Extra cursussen: Videografie en videobewerking, datavisualisatie, typografie, sound(design)</p>
+					<p class="notPrintable"> Opdrachten gedaan voor: Jumbo, CED-Groep, Rijnstate, Gemeente Renkum, Gemeente Wageningen <span class="ampersand">&</span> Hoogte80 festival</p>
+
+					<h3 class="overMijH3">Media Psychology</h3>
+					<p class="overMijFunctieInfo">Sep. 2025 - Heden</p>
+					<p class="overMijFunctieInfo">Minor · Hogeschool Utrecht</p>
+					<br>
+					<p class="notPrintable">In de minor Media Psychology (Engelstalig) heb ik geleerd om op een kritische en genuanceerde manier naar media, in de breedste zin van het woord, te kijken en deze te analyseren. Hoe wij als individuen en als samenleving omgaan met de media, hoe we dit interpreteren, erop reageren, gebruiken, en hoe dit alles ons beïnvloedt. Hierdoor heb ik een nog sterker begrip van hoe verschillende mediakanalen impact kunnen hebben, en wat je kan doen om dit voor goed te gebruiken (of kwaad te voorkomen!).
+				
+					<br>
+			
+					<h3 class="overMijH3">VWO+</h3>
+					<p class="overMijFunctieInfo">Sep. 2016 - jul. 2022</p>
+					<p class="overMijFunctieInfo">Veluws College Walterbosch</p>
+						<br>
+					<p>Diploma Cum Laude behaald.</p>
+						<br>
+					<p>Profiel: Natuur <span class="ampersand">&amp;</span> Techniek</p>
+					<p>Nederlands, Engels, Duits, Natuurkunde, Scheikunde, Wiskunde B, Informatica, Bedrijfseconomie</p>
+				
+					<br>
+			
+					<h3 class="overMijH3">Cambridge Engels</h3>
+					<p class="overMijFunctieInfo">Sep. 2019 - mar. 2021</p>
+						<br>
+					<p>Behaald op proficient (C2) level 3. Onderdeel van VWO+.</p>
+				
+			</article>
+			
+			
+			<!-- Article over nevenactiviteiten -->
+			<article id="nevenactiviteiten">
+				
+				<h2>Nevenactiviteiten</h2>
+				
+					<br>
+			
+				<h3 class="overMijH3">Onderwijsassistent</h3>
+					<p class="overMijFunctieInfo">Jan. 2019 - mar. 2019</p>
+					<p class="overMijFunctieInfo">Basisschool de Poort</p>
+						<br>
+					<p class="notPrintable">Als semi-vrijwilliger heb ik meegeholpen in de klas van groep 7/8. Hierbij was ik onder andere betrokken bij het voorbereiden en uitvoeren van lessen en nakijkwerk.</p>
+				
+			</article>
+			
+		</div>
+	
+		<!-- Tweede side section met personalia, karakter, skills en talen -->
+		<div class="overmijSidebar">
+			
+			<!-- Article over personalia -->
+			<article id="personalia">
+				
+				<h2>Personalia</h2>
+				
+					<br>
+				
+				<h3 class="overMijH3">Naam</h3>
+					<p>Jop Marijnissen</p>
+				
+					<br>
+				
+				<h3 class="overMijH3">Email-adres</h3>
+					<p>jopmarij@gmail.com</p>
+				
+					<br>
+				
+				<h3 class="overMijH3">Telefoonnummer</h3>
+					<p>06 57 49 92 84</p>
+				
+					<br>
+
+				<h3 class="overMijH3">LinkedIn</h3>
+					<a class="hyperlink" href="https://www.linkedin.com/in/jopmarijnissen">linkedin.com/in/jopmarijnissen</a>
+
+					<br>
+					<br>
+				
+				<h3 class="overMijH3">Woonplaats</h3>
+					<p>Arnhem</p>
+				
+			</article>
+			
+			<br>
+			
+			<!-- Article over karakter -->
+			<article id="karakter">
+				
+				<h2>Karakter</h2>
+				
+					<br>
+				
+				<ul>
+					<li>Kwaliteit, altijd</li>
+					<li>Doelgericht</li>
+					<li>Tot in de puntjes</li>
+					<li>Optimaliserend</li>
+					<li>Analytisch</li>
+					<li>Communicatief sterk</li>
+					<li>... En een tikkeltje eigenwijs</li>
+				</ul>
+				
+			</article>
+			
+				<br>
+			
+			<!-- Article over skills -->
+			<article id="Tools">
+				
+				<h2>Tools</h2>
+				
+					<br>
+
+				<h3 class="overMijH3">Als m'n broekzak</h3>
+					<p>Figma Suite, Canva, Notion, Adobe Photoshop</p>
+				
+					<br>
+				
+				<h3 class="overMijH3">Goeie vrienden</h3>
+					<p>Adobe CC (Illustrator, XD, Premiere Pro, Dreamweaver, InDesign, After Effects), HTML, CSS, Wordpress, GA4</p>
+				
+			</article>
+			
+				<br>
+			
+			<!-- Article over talen -->
+			<article id="talen">
+				
+				<h2>Talen</h2>
+				
+					<br>
+
+				<h3 class="overMijH3">Nederlands</h3>
+					<p>Moedertaal</p>
+				
+					<br>
+				
+				<h3 class="overMijH3">English</h3>
+					<p>Fluent</p>
+				
+					<br>
+				
+				<h3 class="overMijH3">Deutsch</h3>
+					<p>Ein bisschen</p>
+				
+			</article>
+		
+	  </div>
+		
+  </div>
+
+</main>
+	
+<!-- Simpele footer met link om terug naar boven te gaan en copyright tekst -->	
+<footer>
+	
+	<div class="footerContainer">
+		<a href="#headerSkip" title="Ga terug naar boven">&uarr; Ga terug naar boven &uarr;</a>
+		<p id="footerCopyrightText">© 2025 Jop Marijnissen - Alle rechten voorbehouden<br>
+		Ontworpen <span class="ampersand"> &amp; </span> ontwikkeld door Jop Marijnissen
+		</p>
+	</div>
+	
+</footer>
+	
+</body>
+	
+</html>

@@ -1,0 +1,58 @@
+/**
+* @license
+*
+* Font Family: Zodiak
+* Designed by: Jérémie Hornus, Gaetan Baehr, Jean-Baptiste Morizot, Alisa Nowak, Theo Guillard
+* URL: https://www.fontshare.com/fonts/zodiak/zodiak
+* © 2025 Indian Type Foundry
+*
+* Zodiak Thin 
+* Zodiak ThinItalic 
+* Zodiak Light 
+* Zodiak LightItalic 
+* Zodiak Regular 
+* Zodiak Italic 
+* Zodiak Bold 
+* Zodiak BoldItalic 
+* Zodiak Extrabold 
+* Zodiak ExtraboldItalic 
+* Zodiak Black 
+* Zodiak BlackItalic 
+* Zodiak Variable (Variable font)
+* Zodiak VariableItalic (Variable font)
+
+/**
+* This is a variable font
+* You can control variable axes as shown below:
+* font-variation-settings: wght 900.0;
+*
+* available axes:
+'wght' (range from 100.0 to 900.0
+*/
+@font-face {
+  font-family: 'Zodiak-Variable';
+  src: url('../fonts/zodiak/Zodiak-Variable.woff2') format('woff2'),
+       url('../fonts/zodiak/Zodiak-Variable.woff') format('woff'),
+       url('../fonts/zodiak/Zodiak-Variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+/**
+* This is a variable font
+* You can control variable axes as shown below:
+* font-variation-settings: wght 900.0;
+*
+* available axes:
+'wght' (range from 100.0 to 900.0
+*/
+@font-face {
+  font-family: 'Zodiak-VariableItalic';
+  src: url('../fonts/zodiak/Zodiak-VariableItalic.woff2') format('woff2'),
+       url('../fonts/zodiak/Zodiak-VariableItalic.woff') format('woff'),
+       url('../fonts/zodiak/Zodiak-VariableItalic.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+}
+
