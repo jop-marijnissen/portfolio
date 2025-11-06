@@ -32,7 +32,8 @@
 
 html {
 	scroll-behavior: smooth;
-	background: linear-gradient(200deg, var(--color-bg-primary-1), var(--color-bg-primary-2));
+	background: var(--color-bg-primary-1);
+	scrollbar-color: #3bf172 #402306;
 }
 
 body {
@@ -1227,6 +1228,10 @@ body.three-tone-disabled .fiftyToneOverlay {
 /* ====================================================================================== */
 
 @media screen and (min-width: 1400px) {
+
+	html {
+		background: linear-gradient(200deg, var(--color-bg-primary-1), var(--color-bg-primary-2));
+	}
 	
 	h1 {
 		font-size: 6.2em;
