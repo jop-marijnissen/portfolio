@@ -144,7 +144,7 @@
     input.addEventListener('input', applyState);
 
     function updateSpotlightBasedOnViewport() {
-      if (window.innerWidth >= 1024) {
+      if (window.innerWidth >= 1096) {
         switchContainer.style.display = 'inline-block';
         // Respect saved state
         var saved = localStorage.getItem('spotlightEnabled');
